@@ -1,3 +1,7 @@
+from django.conf.urls import include, url
+from django.contrib import admin
+admin.autodiscover()
+
 urlpatterns = patterns('qa.views',                                              
    url(r'^$', 'test'),                                                              
    url(r'^login/.*$', 'test', name='login'),                                    
