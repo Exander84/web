@@ -8,4 +8,4 @@ chmod 777 ask/manage.py
 ask/manage.py startapp ask/qa
 cp views.py ask/qa/
 cp urls.py ask/qa/
-gunicorn -b 0.0.0.0:8080 hello:app
+sudo gunicorn -b 0.0.0.0:8080 hello:app
