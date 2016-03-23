@@ -5,7 +5,9 @@ sudo ln -s /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 django-admin startproject ask
 chmod 777 ask/manage.py
-ask/manage.py startapp ask/qa
+cd ask
+./manage.py startapp ask/qa
+cd ..
 cp views.py ask/qa/
 cp urls.py ask/qa/
-sudo gunicorn -b 0.0.0.0:8080 hello:app
+sudo gunicorn -b 0.0.0.0:8080 ask/wsgi.py -
