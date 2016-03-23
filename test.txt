@@ -1,0 +1,45 @@
+find /opt/tomcat/apache-tomcat-8.0.32/webapps/jasperserver62/WEB-INF/lib -name "*.jar" -exec sh -c 'jar -tf {}|grep -H --label {} 'JSControlledResultSetDataSource'' \;
+grep -Ril "cloudera-manager" /opt/tomcat/apache-tomcat-8.0.32/webapps/jasperserver62
+
+sudo lsof -i
+sudo netstat -lptu
+sudo netstat -tulpn
+
+
+
+
+grep -Ril "cloudera-manager.commprove.com" /var/run/cloudera-scm-agent/process/
+
+
+curl -I http://localhost:80/some.file
+nginx -t.
+
+
+cat /home/box/web/etc/nginx.conf
+
+2. удалите символическую ссылку 
+sudo rm /etc/nginx/sites-enabled/test.conf
+
+3. создайте новую символическую ссылку именно такой командой:
+sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
+
+4. снова проверьте чтобы символическая ссылка вела на ваш конфиг:
+cat /etc/nginx/sites-enabled/test.conf
+
+перезапустите nginx и проверьте
+
+
+git clone https://github.com/exander84/web.git
+
+js/test.jsjsj
+
+sudo -s
+  nano /var/log/nginx/error.log
+  
+  chmod 777 file
+  
+   ps -o pid,euser,egroup,comm,args -C nginxgi
+   git
+   
+   
+   gunicorn --check-config APP_MODULE

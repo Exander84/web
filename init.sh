@@ -6,8 +6,12 @@ sudo /etc/init.d/gunicorn restart
 django-admin startproject ask
 chmod 777 ask/manage.py
 cd ask
-./manage.py startapp ask/qa
+./manage.py startapp qa
 cd ..
 cp views.py ask/qa/
 cp urls.py ask/qa/
-sudo gunicorn -b 0.0.0.0:8080 ask/wsgi.py -
+cp urls.py ask/ask/qa/
+cd ask
+cd ask
+sudo gunicorn --bind 0.0.0.0:8000 --access-logfile log.log ask.wsgi:application?
+
