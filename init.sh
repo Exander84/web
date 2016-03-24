@@ -9,9 +9,10 @@ cd ask
 ./manage.py startapp qa
 cd ..
 cp views.py ask/qa/
+pwd
+cp urls.py ask/ask/
+pwd
 cp urls.py ask/qa/
-cp urls.py ask/ask/qa/
 cd ask
 cd ask
-sudo gunicorn --bind 0.0.0.0:8000 --access-logfile log.log ask.wsgi:application?
-
+sudo gunicorn --bind 0.0.0.0:8000 --access-logfile acs.log --error-logfile err.log wsgi:application &
